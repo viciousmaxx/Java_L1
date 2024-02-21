@@ -15,8 +15,10 @@ public class Cat extends Animal {
     public void run(int dist) {
         if (dist > 200) {
             System.out.println("Ограничение у кошки - 200м");
-        } else {
+        } else if (dist > 0){
             System.out.println("Кот пробежал " + dist + " метров");
+        } else {
+            System.out.println("Расстояние некорректно.");
         }
     }
 

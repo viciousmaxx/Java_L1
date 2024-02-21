@@ -15,8 +15,10 @@ public class WildCat extends Animal {
     public void run(int dist) {
         if (dist > 300) {
             System.out.println("Ограничение у тигра - 300м");
-        } else {
+        } else if (dist > 0) {
             System.out.println("Тигр пробежал " + dist + " метров");
+        } else {
+            System.out.println("Расстояние некорректно.");
         }
     }
 
@@ -24,8 +26,10 @@ public class WildCat extends Animal {
     public void swim(int dist) {
         if (dist > 50) {
             System.out.println("Ограничение на воде у тигра - 50м");
-        } else {
+        } else if (dist > 0) {
             System.out.println("Тигр проплыл " + dist + " метров");
+        } else {
+            System.out.println("Расстояние некорректно.");
         }
     }
 }

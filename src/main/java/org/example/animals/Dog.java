@@ -6,6 +6,7 @@ public class Dog extends Animal {
     public Dog() {
         counter++;
     }
+
     public static void getNumOfInstances() {
         System.out.println(counter + " dog");
     }
@@ -14,17 +15,22 @@ public class Dog extends Animal {
     public void run(int dist) {
         if (dist > 500) {
             System.out.println("Ограничение у собаки - 500м");
-        } else {
+        } else if (dist > 0) {
             System.out.println("Пес пробежал " + dist + " метров");
+        } else {
+            System.out.println("Расстояние некорректно.");
         }
+
     }
 
     @Override
     public void swim(int dist) {
         if (dist > 10) {
             System.out.println("Ограничение на воде у собаки - 10м");
-        } else {
+        } else if (dist > 0) {
             System.out.println("Пес проплыл " + dist + " метров");
+        } else {
+            System.out.println("Расстояние некорректно.");
         }
     }
 }

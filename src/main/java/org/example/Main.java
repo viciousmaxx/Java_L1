@@ -32,7 +32,7 @@ public class Main {
 
         for (Animal animal : catsAndDogs) {
             animal.run(100);
-            animal.swim(10);
+            animal.swim(50);
         }
 
         Animal.getNumOfInstances();
